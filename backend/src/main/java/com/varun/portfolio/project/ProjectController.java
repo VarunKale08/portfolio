@@ -2,7 +2,7 @@ package com.varun.portfolio.project;
 
 import java.util.List;
 
-import com.varun.portfolio.dto.ProjectResponse;
+import com.varun.portfolio.project.dto.ProjectResponse;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

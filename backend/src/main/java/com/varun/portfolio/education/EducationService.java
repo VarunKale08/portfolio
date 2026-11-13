@@ -1,7 +1,7 @@
 package com.varun.portfolio.education;
 
 
-import com.varun.portfolio.dto.EducationResponse;
+import com.varun.portfolio.education.dto.EducationResponse;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

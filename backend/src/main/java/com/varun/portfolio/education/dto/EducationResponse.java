@@ -1,4 +1,4 @@
-package com.varun.portfolio.dto;
+package com.varun.portfolio.education.dto;
 
 import com.varun.portfolio.education.Education;
 import java.time.LocalDate;

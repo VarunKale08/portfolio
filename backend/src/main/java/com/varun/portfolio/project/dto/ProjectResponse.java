@@ -1,4 +1,4 @@
-package com.varun.portfolio.dto;
+package com.varun.portfolio.project.dto;
 
 //package com.varun.portfolio.project.dto;
 
