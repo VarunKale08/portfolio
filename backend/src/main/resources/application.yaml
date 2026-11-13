@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: portfolio-api
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  docker:
+    compose:
+      lifecycle-management: start-only
