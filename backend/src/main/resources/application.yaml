@@ -15,3 +15,7 @@ app:
   mail:
     resend-api-key: ${RESEND_API_KEY:}
     to: ${CONTACT_EMAIL_TO:}
+  contact:
+    rate-limit:
+      max-requests: 5
+      window-minutes: 60

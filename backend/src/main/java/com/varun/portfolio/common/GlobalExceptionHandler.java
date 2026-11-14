@@ -44,4 +44,15 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         body.setProperty("errors", errors);
         return handleExceptionInternal(ex, body, headers, status, request);
     }
+
+
+    // ... existing imports ...
+
+    @ExceptionHandler(TooManyRequestsException.class)
+    public ProblemDetail handleTooManyRequests(TooManyRequestsException ex) {
+        return ProblemDetail.forStatusAndDetail(
+                HttpStatus.TOO_MANY_REQUESTS,
+                ex.getMessage()
+        );
+    }
 }
