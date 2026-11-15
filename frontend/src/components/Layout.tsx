@@ -1,5 +1,5 @@
 import { Link, NavLink, Outlet } from "react-router";
-
+import { API_URL } from "../api/client";
 export default function Layout() {
   return (
     <div className="shell">
@@ -14,6 +14,9 @@ export default function Layout() {
             <NavLink to="/projects">Projects</NavLink>
             <NavLink to="/cv">CV</NavLink>
             <NavLink to="/contact">Contact</NavLink>
+            <a className="resume arrow" href={`${API_URL}/api/resume`}>
+              download resume.pdf
+            </a>
           </nav>
         </div>
         <div className="portrait">your photo</div>
