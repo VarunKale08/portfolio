@@ -32,6 +32,11 @@ export default function Projects() {
                     github
                   </a>
                 )}
+                {project.liveUrl && (
+                <a className="arrow" href={project.liveUrl}>
+                    live site
+                </a>
+                )}
               </div>
             </div>
           ))}
