@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router";
 import type { Project } from "../api/types";
 import { useApi } from "../hooks/useApi";
+import Status from "../components/Status";
 
 export default function ProjectDetail() {
   // 1. Read the slug from the URL
@@ -15,8 +16,7 @@ export default function ProjectDetail() {
         <span>varun kale / projects / {slug}</span>
       </div>
 
-      {loading && <p className="small">Loading...</p>}
-      {error && <p className="small">{error}</p>}
+    <Status loading={loading} error={error} />
 
       {project && (
         <>

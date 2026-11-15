@@ -48,11 +48,15 @@ p { margin: 0; }
 .nav a.resume { color: var(--panel-muted); margin-top: 10px; }
 .nav .theme { font: 400 11px/1.65 var(--font); color: var(--panel-muted); background: none; border: 0; padding: 0 0 0 18px; margin-top: 14px; cursor: pointer; }
 .nav .theme:hover { color: var(--panel-red); }
-.portrait {
-  margin-top: auto; width: 100%; aspect-ratio: 1 / 1;
-  background: linear-gradient(200deg, var(--ph1) 0%, var(--ph2) 45%, var(--panel) 85%);
-  display: flex; align-items: flex-end; padding: 10px 12px;
-  font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--panel-muted);
+
+.portrait { 
+  margin-top: auto; 
+  width: 100%; 
+  aspect-ratio: 1 / 1; 
+  object-fit: cover; 
+  object-position: top; 
+  filter: grayscale(1); 
+  display: block; 
 }
 
 /* page */

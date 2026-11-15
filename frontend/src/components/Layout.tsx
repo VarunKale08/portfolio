@@ -1,5 +1,7 @@
 import { Link, NavLink, Outlet } from "react-router";
 import { API_URL } from "../api/client";
+import ThemeToggle from "./ThemeToggle";
+import portrait from "../assets/portrait.jpg"; 
 export default function Layout() {
   return (
     <div className="shell">
@@ -17,9 +19,10 @@ export default function Layout() {
             <a className="resume arrow" href={`${API_URL}/api/resume`}>
               download resume.pdf
             </a>
+            <ThemeToggle />
           </nav>
         </div>
-        <div className="portrait">your photo</div>
+        <img className="portrait" src={portrait} alt="Varun Kale" />
       </aside>
 
       <main>

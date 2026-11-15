@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import type { Project } from "../api/types";
 import { useApi } from "../hooks/useApi";
+import Status from "../components/Status";
 
 export default function Projects() {
   const { data: projects, error, loading } = useApi<Project[]>("/api/projects");
@@ -13,8 +14,7 @@ export default function Projects() {
       </div>
       <h1>Projects</h1>
 
-      {loading && <p className="small">Loading...</p>}
-      {error && <p className="small">{error}</p>}
+    <Status loading={loading} error={error} />
 
       {projects && (
         <div className="entries">

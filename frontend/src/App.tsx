@@ -5,6 +5,7 @@ import Projects from "./pages/Projects";
 import Cv from "./pages/Cv";
 import Contact from "./pages/Contact";
 import ProjectDetail from "./pages/ProjectDetail"; 
+import NotFound from "./pages/NotFound";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="projects/:slug" element={<ProjectDetail />} />
         <Route path="cv" element={<Cv />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} /> 
       </Route>
     </Routes>
   );

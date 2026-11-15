@@ -1,6 +1,7 @@
 import type { Profile } from "../api/types";
+import Status from "../components/Status";
 import { useApi } from "../hooks/useApi";
-
+import portrait from "../assets/portrait.jpg";
 // "https://github.com/VarunKale08" -> "github.com/VarunKale08"
 function displayUrl(url: string): string {
   return url.replace(/^mailto:/, "").replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "");
@@ -15,11 +16,10 @@ export default function About() {
         <span>varun kale / about</span>
         <span>{profile?.location}</span>
       </div>
+      <img className="portrait about-photo" src={portrait} alt="Varun Kale" />
       <h1>About</h1>
 
-      {loading && <p className="small">Loading...</p>}
-      {error && <p className="small">{error}</p>}
-
+    <Status loading={loading} error={error} />
       {profile && (
         <>
           <p>{profile.tagline}</p>
