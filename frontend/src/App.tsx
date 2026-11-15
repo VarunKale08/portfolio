@@ -4,6 +4,7 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Cv from "./pages/Cv";
 import Contact from "./pages/Contact";
+import ProjectDetail from "./pages/ProjectDetail"; 
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
       <Route element={<Layout />}>
         <Route index element={<About />} />
         <Route path="projects" element={<Projects />} />
+        <Route path="projects/:slug" element={<ProjectDetail />} />
         <Route path="cv" element={<Cv />} />
         <Route path="contact" element={<Contact />} />
       </Route>
