@@ -80,7 +80,8 @@ input, textarea { font: 400 13px/1.5 var(--font); color: var(--ink); background:
 input:focus, textarea:focus { outline: 0; border-bottom-color: var(--red); }
 textarea { min-height: 84px; resize: vertical; }
 button.send { justify-self: start; font: 400 13px/1 var(--font); color: var(--red); background: none; border: 0; padding: 6px 0; cursor: pointer; }
-button.send:hover, button.top:hover { text-decoration: underline; }
+button.send:hover, .field-error { color: var(--red); font-size: 11px; }
+button.send:disabled { color: var(--muted); cursor: default; text-decoration: none; } button.top:hover { text-decoration: underline; }
 button.top { font: inherit; color: var(--red); background: none; border: 0; padding: 0; cursor: pointer; }
 
 footer { max-width: 620px; margin-top: 34px; padding-top: 12px; border-top: 1px dotted var(--rule); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; font-size: 11px; color: var(--muted); }
